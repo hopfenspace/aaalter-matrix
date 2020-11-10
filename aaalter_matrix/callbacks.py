@@ -20,7 +20,6 @@ class Callbacks(object):
         self.client = client
         self.store = store
         self.config = config
-        self.command_prefix = config.command_prefix
 
     async def message(self, room, event):
         """Callback for when a message event is received
