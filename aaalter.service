@@ -5,7 +5,7 @@ Description=AAaalter Bot
 WantedBy=multi-user.target
 
 [Service]
-ExecStart=/home/aaalter/venv/bin/python aaalter_matrix.py --serve-in-foreground
+ExecStart=/home/aaalter/venv/bin/python aaalter_matrix.py 
 User=aaalter
 WorkingDirectory=/home/aaalter
 Restart=always
