@@ -30,14 +30,25 @@ class Command(object):
 
     async def process(self):
         """Process the command"""
-        pattern = re.compile(r'\b[a]+lter\b', re.IGNORECASE)
-        matches = pattern.findall(self.command)
-        for match in matches:
-            await self._alter(match)
+        pattern_alter = re.compile(r'\b[a]+lter\b', re.IGNORECASE)
+        matches_alter = pattern_alter.findall(self.command)
+        for match_alter in matches_alter:
+            await self._alter(match_alter)
+        pattern_porsche = re.compile(r'\b((j[a]+wo(h?)[l]+)|porsche|cayman)\b', re.IGNORECASE)
+        matches_porsche = pattern_porsche.findall(self.command)
+        if len(matches_porsche) > 0:
+            await self._porsche()
 
     async def _alter(self, txt):
         await send_text_to_room(
             self.client,
             self.room.room_id,
             f"{''.join([x*2 for x in txt if x in ['a','A']])}{txt[-4:]}{(txt.lower().count('a'))*'!'}",
+        )
+
+    async def _porsche(self):
+        await send_text_to_room(
+            self.client,
+            self.room.room_id,
+            f"PORSCHE CAYMAN S JUNGS!\r\nJAWOLL JAAAAA!"
         )
