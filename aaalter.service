@@ -5,9 +5,9 @@ Description=AAaalter Bot
 WantedBy=multi-user.target
 
 [Service]
-ExecStart=/home/aaalter/aaalter-matrix/venv/bin/python aaalter_matrix.py --serve-in-foreground
+ExecStart=/home/aaalter/venv/bin/python aaalter_matrix.py --serve-in-foreground
 User=aaalter
-WorkingDirectory=/home/aaalter/aaalter-matrix
+WorkingDirectory=/home/aaalter
 Restart=always
 KillSignal=SIGKILL
 StandardError=syslog
