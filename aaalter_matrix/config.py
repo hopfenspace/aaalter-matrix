@@ -92,8 +92,6 @@ class Config(object):
         )
         self.homeserver_url = self._get_cfg(["matrix", "homeserver_url"], required=True)
 
-        self.command_prefix = self._get_cfg(["command_prefix"], default="!c") + " "
-
     def _get_cfg(
         self, path: List[str], default: Any = None, required: bool = True,
     ) -> Any:
