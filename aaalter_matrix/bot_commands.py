@@ -50,5 +50,5 @@ class Command(object):
         await send_text_to_room(
             self.client,
             self.room.room_id,
-            f"PORSCHE CAYMAN S JUNGS!\r\nJAWOLL JAAAAA!"
+            f"PORSCHE CAYMAN S JUNGS!<br/>JAWOLL JAAAAA!"
         )
