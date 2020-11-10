@@ -13,5 +13,6 @@ python-pip
 
 ```
 matrix-nio[e2e]
+markdown
 ```
 
