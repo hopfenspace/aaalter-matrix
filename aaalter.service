@@ -10,4 +10,3 @@ User=aaalter
 WorkingDirectory=/home/aaalter
 Restart=always
 KillSignal=SIGKILL
-StandardError=syslog
